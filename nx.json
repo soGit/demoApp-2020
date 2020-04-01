@@ -1,0 +1,30 @@
+{
+  "npmScope": "sas",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "demo-app-2020": {
+      "tags": []
+    },
+    "demo-app-2020-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo-app-2020"]
+    }
+  }
+}
